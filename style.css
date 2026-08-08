@@ -1,0 +1,137 @@
+:root {
+  color-scheme: dark;
+  --bg: #12110f;
+  --surface: #1c1a17;
+  --border: #3b352c;
+  --text: #ece8df;
+  --muted: #aaa399;
+  --accent: #f0b84b;
+  --link: #86c9df;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--border);
+  background: rgba(18, 17, 15, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 840px;
+  min-height: 56px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] { color: var(--text); }
+
+nav .brand {
+  margin-right: auto;
+  color: var(--accent);
+  font-weight: 750;
+}
+
+main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+h1, h2, h3 {
+  color: #fffaf0;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+h1 { margin: 4px 0 10px; font-size: 34px; }
+h2 { margin: 42px 0 12px; font-size: 22px; }
+h3 { margin: 28px 0 8px; font-size: 17px; }
+p { margin: 10px 0; }
+ol, ul { padding-left: 24px; }
+li { margin: 6px 0; }
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.meta {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+a { color: var(--link); }
+
+.table-wrap {
+  margin: 18px 0;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+th, td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th { color: var(--accent); font-size: 14px; }
+tr:last-child td { border-bottom: 0; }
+
+.notice {
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+}
+
+footer {
+  padding: 24px 20px 40px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  nav { gap: 15px; padding: 0 16px; }
+  main { padding: 34px 16px 56px; }
+  h1 { font-size: 28px; }
+  h2 { margin-top: 34px; font-size: 20px; }
+}
